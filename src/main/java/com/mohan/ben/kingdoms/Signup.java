@@ -71,7 +71,7 @@ public class Signup extends AppCompatActivity implements LoaderCallbacks<Cursor>
         setContentView(R.layout.activity_signup);
         // Set up the login form.
        // mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-        populateAutoComplete();
+//        populateAutoComplete();
 //
 //        mPasswordView = (EditText) findViewById(R.id.password);
 //        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -93,7 +93,7 @@ public class Signup extends AppCompatActivity implements LoaderCallbacks<Cursor>
             }
         });
 
-        mLoginFormView = findViewById(R.id.login_form);
+//        mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
 
