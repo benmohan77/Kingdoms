@@ -53,7 +53,7 @@
                 android:paddingBottom="35dp"
                 android:paddingTop="35dp"
                 android:singleLine="true" />
-            <AutoCompleteTextView
+            <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

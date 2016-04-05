@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Kingdoms="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/log_off"
+        android:orderInCategory="1"
+        Kingdoms:showAsAction="never"
+        android:title="@string/action_log_off_short"
+        />
+
+</menu>
