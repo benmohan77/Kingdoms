@@ -63,7 +63,7 @@ public class Main extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         boolean m = false;
         if (item.getItemId() == R.id.log_off) {
-            editor.remove("bfrank@gmail.com").commit();
+            editor.remove(vEmail).commit();
             Intent i = new Intent(getApplicationContext(), Signup.class);
             startActivity(i);
             m = true;
