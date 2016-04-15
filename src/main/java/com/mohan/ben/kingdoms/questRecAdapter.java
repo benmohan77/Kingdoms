@@ -9,27 +9,27 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import java.util.ArrayList;
 
-//Recycler view adapter used for kingdom list in Main.java
-public class recAdapter extends RecyclerView.Adapter<recAdapter.KingdomViewHolder> {
+/**
+ * RecyclerView Adapter for quest objects
+ */
+public class questRecAdapter extends RecyclerView.Adapter<questRecAdapter.QuestViewHolder> {
 
     private static String LOG_TAG = "MyRecyclerViewAdapter";
-    private ArrayList<Kingdom> mDataset;
-    private ArrayList<Quest> mDataset2;
+    private ArrayList<Quest> mDataset;
     private Context context;
     private ClickListener clickListener;
 
 
-//View Holder for kingdom object
-    public class KingdomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    //ViewHolder for quest objects
+    public class QuestViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView label;
         ImageView img;
 
 
 
-        public KingdomViewHolder(View itemView) {
+        public QuestViewHolder(View itemView) {
             super(itemView);
             label = (TextView) itemView.findViewById(R.id.textView2);
             img = (ImageView) itemView.findViewById(R.id.imgView);
@@ -48,45 +48,49 @@ public class recAdapter extends RecyclerView.Adapter<recAdapter.KingdomViewHolde
     }
 
 
-    public recAdapter(ArrayList<Kingdom> Kingdoms, Context c) {
-        mDataset = Kingdoms;
+    public questRecAdapter(ArrayList<Quest> Quests, Context c) {
+        mDataset = Quests;
         this.context = c;
     }
 
     @Override
-    public KingdomViewHolder onCreateViewHolder(ViewGroup parent,
+    public QuestViewHolder onCreateViewHolder(ViewGroup parent,
                                                 int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.rec_item, parent, false);
 
-        KingdomViewHolder Kingdoms = new KingdomViewHolder(view);
-        return Kingdoms;
+        QuestViewHolder quest = new QuestViewHolder(view);
+        return quest;
     }
 
     @Override
-    public void onBindViewHolder(KingdomViewHolder holder, int position) {
-        holder.img.setImageResource(mDataset.get(position).getIcon());
+    public void onBindViewHolder(QuestViewHolder holder, int position) {
+        holder.img.setImageResource(mDataset.get(position).getGiverImg());
         holder.label.setText(mDataset.get(position).getName());
 
     }
-
-    public void addItem(Kingdom kingdom, int index) {
-        mDataset.add(kingdom);
+    //Getters and setters
+    public ArrayList<Quest> getmDataset(){
+        return mDataset;
+    }
+    public void addItem(Quest quest, int index) {
+        mDataset.add(quest);
         notifyItemInserted(index);
     }
-
     public void deleteItem(int index) {
         mDataset.remove(index);
         notifyItemRemoved(index);
     }
-    public Kingdom getItem(int index){
+    public Quest getItem(int index){
         return mDataset.get(index);
     }
+
 
     @Override
     public int getItemCount() {
         return mDataset.size();
     }
+
 
     public interface ClickListener{
         public void itemClicked(View view, int position);

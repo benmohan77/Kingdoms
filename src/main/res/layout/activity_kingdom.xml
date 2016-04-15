@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:id="@+id/kingdomImage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/kingdomClimate"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kingdomImage"
+        android:text="@string/kingdom_climate"
+        android:textSize="15sp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="20sp"
+        android:textAllCaps="true"
+
+        />
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/kingdomClimateData"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kingdomClimate"
+        android:text="Fair"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/kingdomPop"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kingdomClimateData"
+        android:text="@string/kingdom_pop"
+        android:textSize="15sp"
+        android:textAllCaps="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="20sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/kingdomPopData"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kingdomPop"
+        android:text="Over 9000"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingBottom="40sp"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view2"
+        android:layout_below="@id/kingdomPopData"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

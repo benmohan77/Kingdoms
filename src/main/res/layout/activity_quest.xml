@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:id="@+id/questImage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/questDesc"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questImage"
+        android:textSize="15sp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingBottom="30sp"
+        android:paddingTop="30sp"
+
+        />
+    <LinearLayout
+        android:layout_below="@id/questDesc"
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#285A8C"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/questGiver"
+        android:layout_below="@id/line">
+        <ImageView
+            android:layout_width="56sp"
+            android:layout_height="56sp"
+            android:id="@+id/questGiverImg"
+            android:src="@drawable/god"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/questGiverName"
+            android:layout_height="wrap_content"
+            android:text="Name of Quest Giver N=n"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="20sp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_toRightOf="@id/questGiverImg"
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/questGiverDesc"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questGiver"
+        android:text="Description of Quest Giver"
+        android:textSize="15sp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="20sp"
+        />
+
+
+</RelativeLayout>
